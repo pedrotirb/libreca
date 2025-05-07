@@ -13,6 +13,10 @@
         "apps/desktop/renderer/**"
       ]
     },
+    "build:desktop": {
+      "dependsOn": ["apps/web#build"],
+      "outputs": ["apps/desktop/src-tauri/target/**"]
+    },
     "lint": {
       "outputs": []
     },

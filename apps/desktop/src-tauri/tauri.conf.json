@@ -1,0 +1,33 @@
+{
+  "package": {
+    "productName": "Libreca",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "windows": [
+      {
+        "title": "Libreca",
+        "width": 1280,
+        "height": 720,
+        "fullscreen": false,
+        "resizable": true
+      }
+    ],
+    "bundle": {
+      "identifier": "dev.libreca.app",
+      "icon": ["icons/icon.icns", "icons/icon.png"],
+      "targets": ["deb", "appimage", "dmg", "msi"]
+    },
+    "security": {
+      "csp": "default-src blob: data: filesystem: ws: http: https: 'unsafe-inline' 'unsafe-eval'"
+    },
+    "build": {
+      "beforeBuildCommand": "pnpm --filter apps/web build",
+      "distDir": "../../web/.next",
+      "devPath": "http://localhost:3000"
+    },
+    "plugins": {
+      "window-state": {}
+    }
+  }
+}

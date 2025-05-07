@@ -1,0 +1,11 @@
+Package: libreca
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Depends: libgtk-3-0, libayatana-appindicator3-1
+Maintainer: Pedro Brito <pedrotirb@icloud.com>
+Homepage: https://libreca.dev
+Description: Libreca – couch‑friendly personal hub
+ An all‑in‑one desktop app for gaming, streaming, smart‑home control,
+ music, books, and backups. Built with Tauri and runs fully offline.

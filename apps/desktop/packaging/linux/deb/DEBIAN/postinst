@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Libreca installed 🎉  Launch with the Applications menu or run 'libreca'."
+exit 0

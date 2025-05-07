@@ -1,0 +1,9 @@
+{
+  "title": "Libreca",
+  "background": "dmg-background.png",
+  "iconSize": 128,
+  "contents": [
+    { "x": 140, "y": 250, "type": "file", "path": "Libreca.app" },
+    { "x": 500, "y": 250, "type": "link", "path": "/Applications" }
+  ]
+}

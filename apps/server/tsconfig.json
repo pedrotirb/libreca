@@ -1,0 +1,1 @@
+"dev:server": "ts-node apps/server/src/index.ts"

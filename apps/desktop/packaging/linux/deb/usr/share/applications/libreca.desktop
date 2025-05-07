@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Libreca
+Comment=All‑in‑one personal hub
+Exec=libreca
+Icon=libreca
+Terminal=false
+Type=Application
+Categories=Utility;Entertainment;

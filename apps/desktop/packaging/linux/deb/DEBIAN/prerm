@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Removing Libreca… bye!"
+exit 0
