@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "dev": {
+      "dependsOn": ["^dev"],
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "apps/**/.next/**",
+        "apps/**/dist/**",
+        "apps/desktop/renderer/**"
+      ]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": []
+    }
+  }
+}

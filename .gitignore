@@ -134,3 +134,32 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+
+# Node & package managers
+node_modules/
+.pnpm-store/
+
+# Turborepo cache
+turbo/
+
+# Builds
+.next/
+out/
+dist/
+apps/desktop/renderer/
+src-tauri/target/
+
+# Supabase local
+.supabase/
+
+# Mac / Editor junk
+.DS_Store
+.vscode/
+.idea/
+
+# Env & secrets
+.env*
+*.local
