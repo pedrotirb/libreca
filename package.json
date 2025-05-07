@@ -1,0 +1,9 @@
+{
+	"devDependencies": {
+		"@types/node": "^22.15.14"
+	},
+	"dependencies": {
+		"fastify": "^5.3.2",
+		"fastify-plugin": "^5.0.1"
+	}
+}

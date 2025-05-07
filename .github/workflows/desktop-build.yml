@@ -2,7 +2,7 @@ name: Build Desktop – Windows · macOS · Linux
 
 on:
   push:
-    tags: ["v*.*.*"]   # e.g. v0.1.0
+    tags: ["v*.*.*"] # e.g. v0.1.0
 
 jobs:
   tauri-build:
@@ -23,20 +23,19 @@ jobs:
           TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
         with:
           working-directory: apps/desktop
-
-- name: Build NSIS installer
-  if: runner.os == 'Windows'
-  run: |
-    choco install nsis -y
-    cd apps/desktop/packaging/windows
-    makensis libreca.nsi
-- name: Sign installer
-  if: runner.os == 'Windows' && env.CERT_THUMBPRINT != ''
-  run: |
-    pwsh apps/desktop/packaging/windows/sign-installer.ps1 -ExePath Libreca-*.exe
-  env:
-    CERT_THUMBPRINT: ${{ secrets.CERT_THUMBPRINT }}
-- uses: actions/upload-artifact@v4
-  with:
-    name: Libreca-Windows
-    path: apps/desktop/packaging/windows/Libreca-*.exe
+      - name: Build NSIS installer
+        if: runner.os == 'Windows'
+        run: |
+          choco install nsis -y
+          cd apps/desktop/packaging/windows
+          makensis libreca.nsi
+      - name: Sign installer
+        if: runner.os == 'Windows' && env.CERT_THUMBPRINT != ''
+        run: |
+          pwsh apps/desktop/packaging/windows/sign-installer.ps1 -ExePath Libreca-*.exe
+        env:
+          CERT_THUMBPRINT: ${{ secrets.CERT_THUMBPRINT }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Libreca-Windows
+          path: apps/desktop/packaging/windows/Libreca-*.exe

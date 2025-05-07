@@ -1,1 +1,6 @@
-"dev:server": "ts-node apps/server/src/index.ts"
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs"
+  }
+}

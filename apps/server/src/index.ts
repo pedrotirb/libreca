@@ -1,3 +1,7 @@
+/// <reference types="node" />
+/**
+ * @typedef {import('node:process')}
+ */
 /**
  * Libreca Optional Backend Service
  * --------------------------------
@@ -11,7 +15,10 @@
 
 import Fastify from 'fastify';
 import fp from 'fastify-plugin';
-import pkg from '../../package.json' assert { type: 'json' };
+import { createRequire } from 'module';
+// @ts-ignore
+const customRequire = createRequire(import.meta.url);
+const pkg = customRequire('../../package.json');
 
 // ─── Fastify instance ───────────────────────────────────────────────────────────
 const app = Fastify({
