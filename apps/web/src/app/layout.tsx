@@ -1,6 +1,7 @@
 import '@/globals.css';
 import type { ReactNode } from 'react';
 import { Inter, Space_Grotesk } from 'next/font/google';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const grotesk = Space_Grotesk({

@@ -1,3 +1,4 @@
+import React from 'react';
 import HexGrid from '@/components/HexGrid';
 
 const modules = [
@@ -14,7 +15,7 @@ const modules = [
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-6">
-      <h1 className="text-4xl font-display">Libreca 🐝</h1>
+      <h1 className="text-4xl font-display">Libreca 🐝</h1>
       <HexGrid modules={modules} />
     </main>
   );
