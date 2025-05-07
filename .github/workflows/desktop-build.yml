@@ -1,0 +1,25 @@
+name: Build Desktop – Windows · macOS · Linux
+
+on:
+  push:
+    tags: ["v*.*.*"]   # e.g. v0.1.0
+
+jobs:
+  tauri-build:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: tauri-apps/tauri-action@v0.2.0
+        env:
+          TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+          TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
+        with:
+          working-directory: apps/desktop

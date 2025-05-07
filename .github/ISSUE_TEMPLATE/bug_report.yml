@@ -1,0 +1,34 @@
+name: 🐞 Bug Report
+description: Report something that isn’t working
+title: "[Bug] "
+labels: bug
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: Describe the bug and steps to reproduce…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / screenshots
+  - type: dropdown
+    id: module
+    attributes:
+      label: Affected module
+      options:
+        - kernel
+        - ludix
+        - spectra
+        - domaro
+        - ritmo
+        - folio
+        - praxis
+        - arkea
+        - agora

@@ -1,0 +1,26 @@
+name: ✨ Feature Request
+description: Suggest an idea for Libreca
+title: "[Feature] "
+labels: enhancement
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Describe your idea
+      placeholder: What problem does it solve? Why is it useful?
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Which module?
+      options:
+        - kernel
+        - ludix
+        - spectra
+        - domaro
+        - ritmo
+        - folio
+        - praxis
+        - arkea
+        - agora
